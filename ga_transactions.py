@@ -4,7 +4,7 @@
 # This is not the prettiest code, but it works. There are a few steps in here for troubleshooting and to reduce API errors.
 # I have personally moved away from this script, but it was the first I wrote for the GA API so I think it's fine for a relative beginner
 # I also assume you are able to interface with the GA API .
-# TODO - Add guide to the API
+# Basic API guide is included in the file /ga_cnxn/credentials.py
 
 from functions import return_ga_data        # This script is located in /ga_cnxn
 from datetime import datetime, timedelta
