@@ -73,7 +73,7 @@ df.channel = df.channel.str.lower()
 #Create adjusted channel groups - here we want to "fail safe" by setting the default first and then moving channels away from that default
 df['adj_channel_lc'] = 'other'
 df.adj_channel_lc = np.where(df.medium == 'email', 'email', df.adj_channel_lc)
-df.adj_channel_lc = np.where(df.medium == 'cpc', 'cpc', df.adj_channel_lc)
+df.adj_channel_lc = np.where(df.medium == 'cpc', 'cpc_non_brand', df.adj_channel_lc)
 df.adj_channel_lc = np.where(np.logical_and(df.medium == 'cpc', df.campaign.str.contains('brand')), 'cpc_brand', df.adj_channel_lc)
 df.adj_channel_lc = np.where(np.logical_and(df.medium == 'cpc', df.campaign.str.contains('shopping')), 'cpc_shopping', df.adj_channel_lc)
 
